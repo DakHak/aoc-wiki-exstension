@@ -1,0 +1,262 @@
+html {
+    width: 465px;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    text-align: center;
+    background: #333;
+}
+
+form input {
+    margin: 10px 0;
+}
+
+form button {
+    color: #e69710;
+    background-color: #333;
+    border: solid 2px #e69710;
+    padding: 5px;
+}
+
+form button:hover,
+form button:active {
+    color: #fff;
+    cursor: pointer;
+}
+
+#suggestion_container{
+    position:relative;
+}
+
+#suggestions_response {
+    list-style-type:none;
+    color:#e69710;
+    background:#fff;
+    position:absolute;
+    z-index:10;
+    margin: 0;
+    display: block;
+    width: 240px;
+    margin: 0 auto;
+    top: -10px;
+    left: 105px;
+}
+
+#suggestions_response li{
+    margin: 5px 0;
+    text-align: left;
+}
+
+
+#suggestions_response li:nth-child(odd){
+    background:#ccc;
+}
+
+
+#suggestions_response li a:link, #suggestions_response li a:active, #suggestions_response li a:visited {
+    color:#333;
+    font-size: 14px;
+    display:block;
+    padding:4px;
+}
+
+#suggestions_response li:focus, #suggestions_response li a:focus {
+    background:#333;
+    color:#fff;
+}
+
+#suggestions_response li a:hover {
+    color:#333;
+}
+
+#nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 10px;
+    height: 100px;
+    right: 5px;
+}
+
+#content_from_url {
+    display: none;
+    color: #fff;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+#back_button {
+    position: absolute;
+    font-size: 18px;
+    color: #e69710;
+    font-weight: bold;
+    cursor:pointer;
+    display:none;
+}
+
+#nav button {
+    display: none;
+    color: #e69710;
+    background-color: #333;
+    border: solid 2px #e69710;
+    padding: 5px 10px 5px 10px;
+    margin: 0 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#nav button:hover,
+#nav button:active {
+    color: #fff;
+}
+
+#results,
+#aside {
+    display: none;
+    background: #333;
+    color: #c1c1c1;
+    width: 450px;
+}
+
+form #searchInput {
+    background: linear-gradient(transparent, transparent), url(search-ltr.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-color: #fff;
+    padding: 5px;
+}
+
+#results_intro {
+    color: #333;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    background: #fff;
+    margin: 10px 0;
+}
+
+#results_content {
+    color: #c1c1c1;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    background: #333;
+    margin: 10px 0;
+}
+
+#results_intro a:link,
+#results_intro a:active,
+#results_intro a:visited,
+#results_content a:link,
+#results_content a:active,
+#results_content a:visited,
+#content_from_url a:link,
+#content_from_url a:visited,
+#content_from_url a:active, 
+#suggestions_response li:focus a:link, 
+#suggestions_response li:focus a:hover, 
+#suggestions_response li:focus a:active,
+#suggestions_response li:focus a:visited,
+#aside a:link, #aside a:active, #aside a:hover, #aside a:visited {
+    color: #e69710
+}
+
+#results_content a:hover,
+#content_from_url a :hover {
+    color: #fff;
+}
+
+#results_intro a:hover {
+    font-weight: #333;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/** Gallery **/
+ul.gallery {
+    width: 100%;
+    margin: 2px;
+    padding: 2px;
+    list-style-type: none;
+}
+
+ul.gallery li {
+    margin: 5px 0;
+    width: 32% !important;
+    height: 170px;
+    float: left;
+    background-color: #4c4c4c;
+    border-color: #666;
+}
+
+.gallerybox .thumb,
+.gallerybox .thumb div {
+    margin: 0 !important;
+}
+
+.gallerybox .thumb div {
+    padding: 5px;
+}
+
+.gallerybox .thumb video {
+    position: relative;
+    top: -25px;
+}
+
+.progress{
+    position: relative;
+    height: 10px;
+    width: 250px;
+    border: 2px solid #f4a261;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+#loading {
+    margin: 60px 0;
+    display:none;
+}
+
+#loading img {
+    max-width:100%;
+}
+
+.reference-text{
+    float:left;
+}
+
+.progress .color{
+    position: absolute;
+    background-color: #ffffff;
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}
+
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
