@@ -6,7 +6,7 @@ Press Ctrl+Shift+S to start searching.
 This started as a personal project but it seems stable enough for others to use. That said, this is very much an alpha version of the extension and I welcome contributions and bug reports.
 
 ## Installation
-The extension is currently awaiting approval in the Chrome Web Store. If you want to install the extension manually simply extract ![wiki_extension.zip](wiki_extension.zip) then go to chrome://extensions and hit "Load Unpacked" (top left) and select folder. Enjoy.
+The extension is currently awaiting approval in the Chrome Web Store. If you want to install the extension manually simply extract [wiki_extension.zip](wiki_extension.zip) then go to chrome://extensions and hit "Load Unpacked" (top left) and select folder. Enjoy.
 
 ## Contributions
 PRs and issue reports are very welcome.
