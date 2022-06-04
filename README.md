@@ -23,3 +23,11 @@ This has not been "officially" endorsed by ashesofcreation.wiki.
 ![screenshot 3](screens/search3.jpg)
 ![screenshot 4](screens/search4.jpg)
 ![screenshot 5](screens/search5.jpg)
+
+### Todo
+- Menu stick bug fix
+- Get popovers to work
+- Options screen
+- Customize shortcut keys
+- Media only search
+- Advanced search
