@@ -1,6 +1,6 @@
 {
     "name": "Ashes Of Creation Wiki Search",
-    "description": "Search extension for the Ashes of Creation Wiki. Press Ctrl+Shift+S to a initiate search.",
+    "description": "Search extension for the Ashes of Creation (game) Wiki.",
     "version": "0.1",
     "manifest_version": 3,
     "background": {
