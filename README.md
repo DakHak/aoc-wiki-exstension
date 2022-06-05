@@ -1,11 +1,14 @@
 # aoc-wiki-extension
-Wiki search extension for the game Ashes of Creation. It provides an interface to https://ashesofcreation.wiki/ search functions.
-
-Press Ctrl+Shift+S to start searching.
+Wiki search extension for the game Ashes of Creation. It provides an interface to https://ashesofcreation.wiki/ search functions. I like using this while watching the live streams.
 
 This started as a personal project but it seems stable enough for others to use. That said, this is very much an alpha version of the extension and I welcome contributions and bug reports.
 
+## Key things
+- Press Ctrl+Shift+S to start searching.
+- Ctrl+click a link to open it in new tab and not in the extension window.
+
 ## Installation
+** Awaiting Chrome webstore approval**
 The extension is currently awaiting approval in the Chrome Web Store. If you want to install the extension manually simply extract [wiki_extension.zip](wiki_extension.zip) then go to chrome://extensions and hit "Load Unpacked" (top left) and select folder. Enjoy.
 
 ## Contributions
