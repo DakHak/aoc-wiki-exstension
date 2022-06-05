@@ -1,4 +1,4 @@
-# aoc-wiki-exstension
+# aoc-wiki-extension
 Wiki search extension for the game Ashes of Creation. It provides an interface to https://ashesofcreation.wiki/ search functions.
 
 Press Ctrl+Shift+S to start searching.
