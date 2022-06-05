@@ -26,7 +26,7 @@ This has not been officially endorsed by ashesofcreation.wiki.
 
 ### Todo
 - help / info menu (in progress)
-- Get popovers to work
+- Get popovers to work (in progress)
 - Options screen
 - Customize shortcut keys
 - Media only search
