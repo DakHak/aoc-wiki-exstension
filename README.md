@@ -14,7 +14,7 @@ PRs and issue reports are very welcome.
 ### Contributors
 - DakHak
 
-This has not been officially endorsed by ashesofcreation.wiki.
+This has not been officially endorsed by <a href="https://ashesofcreation.wiki">ashesofcreation.wiki</a>.
 
 ## Screenshots
 
