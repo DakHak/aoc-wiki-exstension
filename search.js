@@ -5,6 +5,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     window.previous_page = "";
 });
 
+// suggestions clear event
+document.addEventListener('click', function handleClickOutsideBox(event) {
+    const suggestions = document.getElementById('suggestions_response');
+    if (!suggestions.contains(event.target)) {
+        suggestions.innerHTML = '';
+    }
+});
+
+// help event handler
+document.getElementById("help_button").addEventListener("click", (event) => {
+    showTab("help");
+    window.location.hash = "top_of_page";
+    window.scrollBy(0, 0);
+});  
+
 //form submit event
 let searchForm = document.getElementById("searchForm");
 searchForm.addEventListener("submit", async (event) => {
@@ -56,6 +71,9 @@ function loadlLinkHandlers() {
     let results = document.getElementById("results_wrapper");
     results.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", async (event) => {
+            if(event.ctrlKey){
+                return true;
+            }
             event.preventDefault();
             let href = (typeof event.target.href !== "undefined") ? event.target.href : event.target.closest("a").href;
             if (href.indexOf("File:") > -1) {
@@ -75,7 +93,7 @@ function loadlLinkHandlers() {
 
 /**
  * openInNewTab
- * @param {*} href 
+ * @param {*} href
  */
 function openInNewTab(href) {
     Object.assign(document.createElement('a'), {
@@ -156,6 +174,7 @@ function hideDuringLoad() {
     document.querySelector("#results").style.display = "none";
     document.querySelector("#nav button").style.display = "none";
     document.querySelector("#content_from_url").style.display = "none";
+    clearSuggestions();
 }
 
 /**
@@ -166,7 +185,7 @@ document.getElementById("back_button").addEventListener("click", (event) => {
     doSearch(window.previous_search.toString());
 });
 function showBackButton(search) {
-    if(window.previous_page !== ""){
+    if (window.previous_page !== "") {
         document.getElementById("back_button").style.display = "block";
     }
 }
@@ -374,6 +393,7 @@ function loadTOC(node) {
 function showTab(tab) {
     document.getElementById("results").style.display = "none";
     document.getElementById("aside").style.display = "none";
+    document.getElementById("help").style.display = "none";
     document.getElementById(tab).style.display = "block";
 }
 
@@ -383,17 +403,21 @@ function showTab(tab) {
 function registerClickEventHandlers() {
     document.getElementById("results_button").addEventListener("click", (event) => {
         showTab("results");
+        window.location.hash = "top_of_page";
         window.scrollTo(0, 0);
+        document.getElementById("searchInput").focus();
     });
     document.getElementById("aside_button").addEventListener("click", (event) => {
         showTab("aside");
+        window.location.hash = "top_of_page";
         window.scrollTo(0, 0);
+        document.getElementById("searchInput").focus();
     });
     document.getElementById("toc_button").addEventListener("click", (event) => {
         showTab("results");
         window.location.hash = "toc";
-        window.scrollBy(0, -50);
-    });
+        window.scrollBy(0, -30);
+    });  
 }
 
 /**
@@ -418,4 +442,24 @@ function debounce(func, wait, immediate) {
         if (callNow) func.apply(context, args);
     };
 };
+
+/**
+ * fetchPreviews
+ * @param {string} title 
+ */
+function fetchPreviews(title){
+    let search_result = fetch(`https://ashesofcreation.wiki/api.php?action=query&format=json&prop=info|extracts|pageimages|revisions|info&formatversion=2&redirects=true&exintro=true&exchars=525&explaintext=true&piprop=thumbnail&pithumbsize=320&pilicense=any&rvprop=timestamp&inprop=url&titles=${title}&smaxage=300&maxage=300&uselang=content?`);
+    search_result.then(response => response.text())
+    .then((preview_response) => {
+        showPreview(JSON.parse(preview_response));
+    });
+}
+
+/**
+ * 
+ * @param {*} preview_response
+ */
+function showPreview(preview_response){
+ //@todo
+}
 

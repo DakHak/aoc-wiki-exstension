@@ -10,37 +10,57 @@
 
 <body>
     <div id="top_of_page"></div>
-    <div id="back_button"><-</div>
-    <a href="https://ashesofcreation.wiki" target="_blank"><img src="/newwikilogo150.png" width="150"
-            height="150" /></a>
-    <form id="searchForm" method="get" action="https://ashesofcreation.wiki/index.php" autocomplete="off">
-        <input id="searchInput" name="search" type="text" placeholder="Search wiki..." />
-        <input type="text" name="go" value="Go" hidden="true"/>
-        <button id="searchButton">Search</button>
-        <div id="loading">
-            <div class="progress">
-                <div class="color"></div>
-              </div>
-        </div>
-        <div id="suggestion_container">
-            <ul id="suggestions_response"></ul>
-        </div>
-    </form>
-    <div id="content_from_url">
-        <div></div>
-    </div>
-    <div id="nav"><button id="results_button">Results</button><button id="aside_button">Media</button><button
-            id="toc_button">Contents</button></div>
-    <div id="results_wrapper">
-        <div id="results">
-            <div id="results_header"></div>
-            <div id="results_intro"></div>
-            <div id="results_content"></div>
-        </div>
-        <div id="aside"></div>
-    </div>
-    <div id="toc"></div>
-    <script src="search.js"></script>
+    <div id="back_button">
+        <- </div>
+            <a href="https://ashesofcreation.wiki" target="_blank"><img src="/newwikilogo150.png" width="150"
+                    height="150" /></a>
+            <form id="searchForm" method="get" action="https://ashesofcreation.wiki/index.php" autocomplete="off">
+                <input id="searchInput" name="search" type="text" placeholder="Search wiki..." />
+                <input type="text" name="go" value="Go" hidden="true" />
+                <button id="searchButton">Search</button>
+                <div id="loading">
+                    <div class="progress">
+                        <div class="color"></div>
+                    </div>
+                </div>
+                <div id="suggestion_container">
+                    <ul id="suggestions_response"></ul>
+                </div>
+            </form>
+            <div id="content_from_url">
+                <div></div>
+            </div>
+            <div id="nav">
+                <button id="results_button">Results</button>
+                <button id="aside_button">Media</button>
+                <button id="toc_button">Contents</button>
+                <button id="help_button">Help</button>
+            </div>
+            <div id="results_wrapper">
+                <div id="results">
+                    <div id="results_header"></div>
+                    <div id="results_intro"></div>
+                    <div id="results_content"></div>
+                </div>
+                <div id="aside"></div>
+            </div>
+            <div id="help">
+                <h1>Help</h1>
+                <p>Spotted a bug? Thought of a feature? Please create an issue on github: <a
+                        href="https://github.com/DakHak/aoc-wiki-exstension/issues" target="_blank">https://github.com/DakHak/aoc-wiki-exstension/issues</a>
+                </p>.
+                <h2>FAQ</h2>
+                <p><span>How do I know this extension is safe?</span>You can view the code for yourself here <a
+                        href="https://github.com/DakHak/aoc-wiki-exstension/" target="_blank">https://github.com/DakHak/aoc-wiki-exstension/</a>
+                </p>
+                <p><span>How do I open a link in a full new tab?</span>Ctrl+click the link to open in a new tab and go
+                    directly to <a href="https://ashesofcreation.wiki/" target="_blank">https://ashesofcreation.wiki/</a>. An option to
+                    set default behaviour is coming soon.</p>
+                <p><span>How do I change the keyboard shortcut?</span>You can't (yet). An options screen to control this
+                    is coming soon.</p>
+            </div>
+            <div id="toc"></div>
+            <script src="search.js"></script>
 </body>
 
 </html>

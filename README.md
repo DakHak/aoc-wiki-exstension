@@ -14,7 +14,7 @@ PRs and issue reports are very welcome.
 ### Contributors
 - DakHak
 
-This has not been "officially" endorsed by ashesofcreation.wiki.
+This has not been officially endorsed by ashesofcreation.wiki.
 
 ## Screenshots
 
@@ -25,9 +25,13 @@ This has not been "officially" endorsed by ashesofcreation.wiki.
 ![screenshot 5](screens/search5.jpg)
 
 ### Todo
-- Menu stick bug fix
+- help / info menu (in progress)
 - Get popovers to work
 - Options screen
 - Customize shortcut keys
 - Media only search
 - Advanced search
+
+### Known bugs
+- ~~ Suggestions menu sticks sometimes ~~ (fixed)
+- ~~ Contents button navigates to wrong index ~~ (fixed)

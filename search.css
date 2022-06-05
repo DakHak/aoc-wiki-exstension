@@ -25,16 +25,16 @@ form button:active {
     cursor: pointer;
 }
 
-#suggestion_container{
-    position:relative;
+#suggestion_container {
+    position: relative;
 }
 
 #suggestions_response {
-    list-style-type:none;
-    color:#e69710;
-    background:#fff;
-    position:absolute;
-    z-index:10;
+    list-style-type: none;
+    color: #e69710;
+    background: #fff;
+    position: absolute;
+    z-index: 10;
     margin: 0;
     display: block;
     width: 240px;
@@ -43,31 +43,34 @@ form button:active {
     left: 105px;
 }
 
-#suggestions_response li{
+#suggestions_response li {
     margin: 5px 0;
     text-align: left;
 }
 
 
-#suggestions_response li:nth-child(odd){
-    background:#ccc;
+#suggestions_response li:nth-child(odd) {
+    background: #ccc;
 }
 
 
-#suggestions_response li a:link, #suggestions_response li a:active, #suggestions_response li a:visited {
-    color:#333;
+#suggestions_response li a:link,
+#suggestions_response li a:active,
+#suggestions_response li a:visited {
+    color: #333;
     font-size: 14px;
-    display:block;
-    padding:4px;
+    display: block;
+    padding: 4px;
 }
 
-#suggestions_response li:focus, #suggestions_response li a:focus {
-    background:#333;
-    color:#fff;
+#suggestions_response li:focus,
+#suggestions_response li a:focus {
+    background: #333;
+    color: #fff;
 }
 
 #suggestions_response li a:hover {
-    color:#333;
+    color: #333;
 }
 
 #nav {
@@ -76,7 +79,7 @@ form button:active {
     flex-direction: column;
     justify-content: space-between;
     top: 10px;
-    height: 100px;
+    height: 130px;
     right: 5px;
 }
 
@@ -84,7 +87,7 @@ form button:active {
     display: none;
     color: #fff;
     text-align: center;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 #back_button {
@@ -92,8 +95,8 @@ form button:active {
     font-size: 18px;
     color: #e69710;
     font-weight: bold;
-    cursor:pointer;
-    display:none;
+    cursor: pointer;
+    display: none;
 }
 
 #nav button {
@@ -105,6 +108,10 @@ form button:active {
     margin: 0 5px;
     width: 100px;
     cursor: pointer;
+}
+
+#nav #help_button {
+    display:block;
 }
 
 #nav button:hover,
@@ -146,6 +153,12 @@ form #searchInput {
     margin: 10px 0;
 }
 
+a:link,
+a:active,
+a:visited {
+    color: #e69710
+}
+
 #results_intro a:link,
 #results_intro a:active,
 #results_intro a:visited,
@@ -154,12 +167,15 @@ form #searchInput {
 #results_content a:visited,
 #content_from_url a:link,
 #content_from_url a:visited,
-#content_from_url a:active, 
-#suggestions_response li:focus a:link, 
-#suggestions_response li:focus a:hover, 
+#content_from_url a:active,
+#suggestions_response li:focus a:link,
+#suggestions_response li:focus a:hover,
 #suggestions_response li:focus a:active,
 #suggestions_response li:focus a:visited,
-#aside a:link, #aside a:active, #aside a:hover, #aside a:visited {
+#aside a:link,
+#aside a:active,
+#aside a:hover,
+#aside a:visited {
     color: #e69710
 }
 
@@ -212,7 +228,7 @@ ul.gallery li {
     top: -25px;
 }
 
-.progress{
+.progress {
     position: relative;
     height: 10px;
     width: 250px;
@@ -223,40 +239,57 @@ ul.gallery li {
 
 #loading {
     margin: 60px 0;
-    display:none;
+    display: none;
 }
 
 #loading img {
-    max-width:100%;
+    max-width: 100%;
 }
 
-.reference-text{
-    float:left;
+.reference-text {
+    float: left;
 }
 
-.progress .color{
+#aside .thumb.tright:first-child {
+    display: none;
+}
+
+.progress .color {
     position: absolute;
     background-color: #ffffff;
     width: 0px;
     height: 10px;
     border-radius: 15px;
-    animation: progres 4s infinite linear;    
+    animation: progres 4s infinite linear;
 }
 
-@keyframes progres{
-    0%{
-      width: 0%;
+@keyframes progres {
+    0% {
+        width: 0%;
     }
-    25%{
+
+    25% {
         width: 50%;
     }
-    50%{
+
+    50% {
         width: 75%;
     }
-    75%{
+
+    75% {
         width: 85%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
-};
+}
+#help {
+    display:none;
+    text-align:left;
+    color:#fff;
+}
+#help p span {
+    display: block;
+    font-weight: bold;
+}
